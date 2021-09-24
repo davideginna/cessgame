@@ -1,0 +1,352 @@
+/*menu di selezione - area di gioco - punteggi e record - stile palla*/
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    background: #f0f0f0;
+}
+/**/
+
+#menu {
+    position: relative;
+}
+
+#container {
+    position: relative;
+    /*border: 1px solid red;*/
+    margin: 0 auto;
+    width: 85%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+/**/
+#gamespace {
+    position: absolute;
+    /*border: 1px solid green;*/
+    width: 100%;
+    height: 90%;
+    top: 10%;
+}
+
+/*punteggio durante il gioco*/
+#punteggio {
+    position: fixed;
+    width: 5%;
+    top: 20%;
+    left: 47.5%;
+    /*border: 1px solid red;*/
+}
+
+#boxtip {
+    position: fixed;
+    width: 32%;
+    height: 20%;
+    /*border: 1px solid red;*/
+    top: 35%;
+    left: 34%;
+    animation-name: boxtip;
+    animation-duration: 3s; /*con questo tempo cel faccio ad evitare bug*/
+    animation-timing-function: linear;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 5vmin;
+    text-align: center;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes boxtip {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.overlay {
+    /*height: 0%;*/
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    transition: 0.5s;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8); /*ombra a tutte le scritte*/
+}
+
+.overlay-content {
+    position: relative;
+    top: 20%;
+    width: 30%;
+    left: 35%;
+    text-align: center;
+    margin-top: 30px;
+    /*border: 1px solid red;*/
+}
+
+#overlay-content {
+    visibility: visible;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.overlay a:hover {
+    color: black;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 21%;
+    left: 80%;
+    width: 5%;
+    font-size: 60px;
+    z-index: 2;
+}
+#closebtn {
+    display: none;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {
+        overflow-y: auto;
+    }
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 10%;
+        left: 80%;
+    }
+}
+
+/*puteggio e record nel menu*/
+#risultato {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    /*border: 1px solid red;*/
+    text-align: center;
+}
+
+#punteggioFinale {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 0%;
+    /*border: 1px solid black;*/
+    text-align: center;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 10vh;
+    animation-name: punteggioFinale;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes punteggioFinale {
+    from {
+        left: 30%;
+        opacity: 0;
+    }
+    to {
+        left: 0%;
+        opacity: 1;
+    }
+}
+
+.puntFinale#punteggioFinale {
+    animation-name: punteggioFinaleR;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes punteggioFinaleR {
+    from {
+        left: 0%;
+        opacity: 0;
+    }
+    to {
+        left: 30%;
+        opacity: 1;
+    }
+}
+/*record*/
+#record {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 80%;
+    /*border: 1px solid black;*/
+    text-align: center;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 10vh;
+    animation-name: record;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes record {
+    from {
+        left: 50%;
+        opacity: 0;
+    }
+    to {
+        left: 80%;
+        opacity: 1;
+    }
+}
+
+.rec#record {
+    animation-name: recordR;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes recordR {
+    from {
+        left: 80%;
+        opacity: 0;
+    }
+    to {
+        left: 50%;
+        opacity: 1;
+    }
+}
+
+/*totali punti e record*/
+#tot {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    /*border: 1px solid red;*/
+    text-align: center;
+}
+
+/**/
+#totPunti {
+    position: absolute;
+    width: 20%;
+    height: 10vmin;
+    left: -10%;
+    /*border: 1px solid black;*/
+    text-align: center;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 10vh;
+    animation-name: totPunti;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes totPunti {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.totP#totPunti {
+    animation-name: totPuntiR;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes totPuntiR {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/**/
+#totRecord {
+    position: absolute;
+    width: 20%;
+    height: 10vmin;
+    left: 65%;
+    /*border: 1px solid black;*/
+    text-align: center;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 10vh;
+    animation-name: totRecord;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes totRecord {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.totR#totRecord {
+    animation-name: totRecordR;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes totRecordR {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/**/
+#canvas {
+    position: fixed;
+    top: 60%;
+    left: 42.5%;
+    width: 15%;
+    height: auto;
+    background-color: transparent;
+    /*border: 1px solid black;*/
+    transition: all 0.2s ease-in-out;
+}
+
+/**/
+#ball {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 255, 255);
+    /*border: 1px solid black;*/
+    border-radius: 45px;
+    margin: auto;
+    display: none;
+}
+
+#choosecolor {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}

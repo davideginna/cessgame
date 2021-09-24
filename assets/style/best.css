@@ -1,0 +1,101 @@
+#bestscore {
+    position: relative;
+    top: 25%;
+    left: 15%;
+    /*border: 1px solid red;*/
+    width: 70%;
+    height: 65%;
+    display: none;
+}
+
+#bestcanvas {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    height: 65%;
+    /*border: 1px solid black;*/
+}
+
+#besttitle {
+    position: absolute;
+    /*top: 5%;*/
+    text-align: center;
+    /*border: 1px solid red;*/
+    font-size: 36px;
+    color: white;
+    display: block;
+    width: 100%;
+}
+
+#besttriangle {
+    position: absolute;
+    left: 10%;
+    width: 15%;
+    /*border: 1px solid red;*/
+}
+
+#besttriangle_score {
+    position: absolute;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    top: 60%;
+    left: 10%;
+    width: 15%;
+    height: 20%;
+    /*border: 1px solid red;*/
+}
+
+#bestsquare {
+    position: absolute;
+    left: 42.5%;
+    width: 15%;
+    /*border: 1px solid blue;*/
+}
+
+#bestsquare_score {
+    position: absolute;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    top: 60%;
+    left: 42.5%;
+    width: 15%;
+    height: 20%;
+    /*border: 1px solid blue;*/
+}
+
+#besthexagon {
+    position: absolute;
+    left: 75%;
+    width: 15%;
+    /*border: 1px solid white;*/
+}
+
+#besthexagon_score {
+    position: absolute;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    top: 60%;
+    left: 75%;
+    width: 15%;
+    height: 20%;
+    /*border: 1px solid white;*/
+}
+
+@media screen and (max-height: 450px) {
+    #besttitle {
+        font-size: 20px;
+    }
+    #besttriangle_score {
+        font-size: 20px;
+    }
+    #bestsquare_score {
+        font-size: 20px;
+    }
+    #besthexagon_score {
+        font-size: 20px;
+    }
+}

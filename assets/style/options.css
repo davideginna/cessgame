@@ -1,0 +1,79 @@
+/*scelta della figura con la quale giocare e relativi effetti*/
+#choosefig {
+    position: relative;
+    top: 25%;
+    left: 15%;
+    width: 70%;
+    height: 65%;
+    display: none;
+}
+
+canvas#seltriangle {
+    position: absolute;
+    left: 10%;
+    transition: 0.3s;
+}
+
+canvas#selsquare {
+    position: absolute;
+    left: 40%;
+    transition: 0.3s;
+}
+
+canvas#selhexagon {
+    position: absolute;
+    left: 70%;
+    transition: 0.3s;
+}
+
+#seltitle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    /*border: 1px solid red;*/
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#selcanvas {
+    position: relative;
+    top: 20%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (max-height: 450px) {
+    #seltitle {
+        font-size: 20px;
+    }
+    canvas#seltriangle {
+        width: 15%;
+        left: 25%;
+    }
+    canvas#selsquare {
+        width: 15%;
+        left: 25%;
+    }
+    canvas#selhexagon {
+        width: 15%;
+        left: 25%;
+    }
+}
+
+/*scelta dei colori*/
+
+#choosecolor {
+    position: relative;
+    top: 30%;
+    margin: auto;
+    /*border: 1px solid red;*/
+    display: none;
+    background: #f0f0f0;
+}

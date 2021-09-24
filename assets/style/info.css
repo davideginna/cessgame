@@ -1,0 +1,16 @@
+#info {
+    position: relative;
+    top: 25%;
+    left: 15%;
+    width: 70%;
+    height: 65%;
+    display: none;
+    font-size: 36px;
+    font-family: "Lato", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#infop {
+    font-size: 32px;
+}

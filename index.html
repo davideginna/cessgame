@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <title>Impossible Rush</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/style/style.css" type="text/css" />
+    <link rel="stylesheet" href="assets/style/options.css" type="text/css" />
+    <link rel="stylesheet" href="assets/style/best.css" type="text/css" />
+    <link rel="stylesheet" href="assets/style/info.css" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="icon" type="iamge/ico" href="assets/img/favicon.ico" />
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/info.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body onload="openNav(), backChange()">
+
+    <div class="container">
+        <div class="row">
+            <div id="menu" class="overlay">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 title">
+                    <h1>Impossible Rush</h1>
+                </div>
+                <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closebtn()">&times;</a>
+
+                <!--menu di selezione-->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div id="overlay-content" class="overlay-content">
+                        <div id="tot">
+                            <div id="totPunti"></div>
+                            <div id="totRecord"></div>
+                        </div>
+                        <div id="risultato">
+                            <div id="punteggioFinale"></div>
+                            <div id="record"></div>
+                        </div>
+                        <a href="#" onclick="closeNav(),figurasel(),startgame()">Play</a>
+                        <a href="#" onclick="options()">Shape</a> <!-- scelta forma e colori della forma -->
+                        <a href="#" onclick="best()">Best</a>
+                        <a href="#" onclick="info()">Info</a>
+                    </div>
+                </div>
+                <!--menu di selezione-->
+
+                <!--selettore figura-->
+                <div id="choosefig">
+                    <div id="seltitle">Shape</div>
+                    <div id="selcanvas">
+                        <canvas id="seltriangle" width="200" height="200" onclick="selfig(this)"></canvas>
+                        <canvas id="selsquare" width="200" height="200" onclick="selfig(this)"></canvas>
+                        <canvas id="selhexagon" width="200" height="200" onclick="selfig(this)"></canvas>
+                    </div>
+                </div>
+                <!--selettore figura-->
+
+                <!--scelta colori-->
+                <canvas id="choosecolor" width="1000" height="400"></canvas>
+                <!--scelta colori-->
+
+                <!--punteggi migliori-->
+                <div id="bestscore">
+                    <div id="besttitle">Best</div>
+                    <div id="bestcanvas">
+                        <canvas id="besttriangle" width="300" height="300"></canvas>
+                        <div id="besttriangle_score"></div>
+                        <canvas id="bestsquare" width="300" height="300"></canvas>
+                        <div id="bestsquare_score"></div>
+                        <canvas id="besthexagon" width="300" height="300"></canvas>
+                        <div id="besthexagon_score"></div>
+                    </div>
+                </div>
+                <!--punteggi migliori-->
+
+                <!--info-->
+                <div id="info">
+                    <h1></h1>
+                    <div id="infop">How to play<br><br>Press "Play" and next press the shape to rotate it.</div>
+                    <h1></h1>
+                    <div id="infop">How to edit<br><br>Press "Shape" and choose a shape, then drag the color and drop on
+                        shape.
+                        (Yes! The shape can be colorful of same color). </div>
+
+                </div>
+                <!--info-->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- gamespace  -->
+    <div id="container" onkeydown="ke(this)">
+        <div id="gamespace">
+            <div id="boxtip">Clik on the shape to rotate it<br> and match the color!!</div>
+            <div id="ball"></div>
+            <canvas id="punteggio" width="100" height="100"></canvas>
+            <canvas id="canvas" width="300" height="300" onclick="ruota()"></canvas>
+        </div>
+    </div>
+    <!-- gamespace  -->
+
+    <script type="text/javascript" src="assets/js/figure.js"></script>
+    <script type="text/javascript" src="assets/js/ball.js"></script>
+    <script type="text/javascript" src="assets/js/options.js"></script>
+    <script type="text/javascript" src="assets/js/best.js"></script>
+
+</body>
+
+</html>
